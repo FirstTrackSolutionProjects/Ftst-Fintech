@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -33,24 +33,28 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="w-full relative mt-20 overflow-hidden">
+    <section className="w-full">
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop
-        className="w-full h-[300px] md:h-[500px]" 
+        modules={[Autoplay, Pagination, Navigation]}
+        spaceBetween={0} // no space between slides
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation={true}
+        className="w-full h-[400px] sm:h-[500px] md:h-[600px]" // responsive height
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="w-full h-full"> 
+          <SwiperSlide key={slide.id}>
             <div
-              className="w-full h-full flex items-center justify-center bg-cover bg-center text-white"
+              className="w-full h-full bg-cover bg-center flex items-center justify-center"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
-              <div className="bg-black/60 px-4 py-6 md:p-10 rounded-xl max-w-xs md:max-w-xl text-center">
-                <h1 className="text-xl md:text-5xl font-bold mb-2 md:mb-4">
+              <div className="bg-black bg-opacity-50 p-6 sm:p-8 md:p-10 rounded-lg text-center max-w-xl mx-4 sm:mx-0">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
                   {slide.title}
-                </h1>
-                <p className="text-sm md:text-lg">{slide.desc}</p>
+                </h2>
+                <p className="text-white text-base sm:text-lg md:text-xl">{slide.desc}</p>
               </div>
             </div>
           </SwiperSlide>
