@@ -36,7 +36,7 @@ export  default function Loan() {
           </div>
 
          <a
-            href="https://fts.firsttracksolutiontechnologies.com/loans"
+            href="https://fts.firsttracksolutiontechnologies.com/loan"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-block px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-medium shadow-lg hover:from-purple-700 hover:to-indigo-600 transition-all"
