@@ -35,9 +35,15 @@ export  default function Loan() {
             ))}
           </div>
 
-          <button className="mt-8 px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-medium shadow-lg hover:from-blue-700 hover:to-indigo-600 transition-all">
+         <a
+            href="https://fts.firsttracksolutiontechnologies.com/loans"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-medium shadow-lg hover:from-purple-700 hover:to-indigo-600 transition-all"
+            >
             Apply Now
-          </button>
+            </a>
+
         </div>
 
         {/* Right Image */}

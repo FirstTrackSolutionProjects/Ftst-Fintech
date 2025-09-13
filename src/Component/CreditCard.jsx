@@ -1,7 +1,9 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
+
 export default function CreditCard() {
+    
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -32,9 +34,15 @@ export default function CreditCard() {
             ))}
           </ul>
 
-          <button className="mt-8 px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-medium shadow-lg hover:from-purple-700 hover:to-indigo-600 transition-all">
+           <a
+            href="https://fts.firsttracksolutiontechnologies.com/credit-card"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-medium shadow-lg hover:from-purple-700 hover:to-indigo-600 transition-all"
+            >
             Get Your Card
-          </button>
+            </a>
+
         </div>
 
         {/* Right Image */}
