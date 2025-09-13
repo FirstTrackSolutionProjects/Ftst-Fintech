@@ -33,12 +33,12 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="w-full relative mt-20">
+    <section className="w-full relative mt-20 overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop
-        className="w-full h-[300px] md:h-[500px]" // 👈 yaha height fix karo
+        className="w-full h-[300px] md:h-[500px]" 
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="w-full h-full"> 
