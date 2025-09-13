@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -35,20 +35,19 @@ export default function HeroSection() {
   return (
     <section className="w-full">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
-        spaceBetween={0} // no space between slides
+        modules={[Autoplay]}
+        spaceBetween={0} 
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        navigation={true}
-        className="w-full h-[400px] sm:h-[500px] md:h-[600px]" // responsive height
+        className="w-full h-[400px] sm:h-[500px] md:h-[600px]" 
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
               className="w-full h-full bg-cover bg-center flex items-center justify-center"
-              style={{ backgroundImage: `url(${slide.img})` }}
+              style={{ backgroundImage: `url(${slide.img})`, backgroundSize: "cover",  
+              backgroundPosition: "center", }}
             >
               <div className="bg-black bg-opacity-50 p-6 sm:p-8 md:p-10 rounded-lg text-center max-w-xl mx-4 sm:mx-0">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
