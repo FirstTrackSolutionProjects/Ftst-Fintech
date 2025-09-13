@@ -38,12 +38,12 @@ export default function HeroSection() {
         modules={[Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop
-        className="h-full w-full"
+        className="w-full h-[300px] md:h-[500px]" // 👈 yaha height fix karo
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide key={slide.id} className="w-full h-full"> 
             <div
-              className="w-full h-[300px] md:h-[500px] flex items-center justify-center bg-cover bg-center text-white"
+              className="w-full h-full flex items-center justify-center bg-cover bg-center text-white"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
               <div className="bg-black/60 px-4 py-6 md:p-10 rounded-xl max-w-xs md:max-w-xl text-center">
