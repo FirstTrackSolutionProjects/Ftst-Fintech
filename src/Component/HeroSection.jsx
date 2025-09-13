@@ -33,14 +33,14 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full mt-20">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0} 
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        className="w-full h-[400px] sm:h-[500px] md:h-[600px]" 
+        className="w-full h-[400px] sm:h-[400px] md:h-[500px]" 
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -49,7 +49,7 @@ export default function HeroSection() {
               style={{ backgroundImage: `url(${slide.img})`, backgroundSize: "cover",  
               backgroundPosition: "center", }}
             >
-              <div className="bg-black bg-opacity-50 p-6 sm:p-8 md:p-10 rounded-lg text-center max-w-xl mx-4 sm:mx-0">
+              <div className="bg-black/60 p-6 sm:p-8 md:p-10 rounded-lg text-center max-w-xl mx-4 sm:mx-0">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
                   {slide.title}
                 </h2>
