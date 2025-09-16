@@ -4,6 +4,7 @@ import KeyFeatures from "../Component/KeyFeatures"
 import Loan from "../Component/Loan"
 import Insurance from "../Component/Insurance"
 import CreditCard from "../Component/CreditCard"
+import AssociatePartners from "../Component/AssociatePartners"
 const Home = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Home = () => {
     <Loan/>
     <Insurance/>
     <CreditCard/>
+    <AssociatePartners/>
     </>
   )
 }
